@@ -11,9 +11,12 @@ import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SignUpModal from '../SignUp/SignUp/SignUpModal';
 import SignInModal from '../SignUp/SignIn/SignInModal';
+import useAuth from '../../Hooks/useAuth';
 const Navbar = () => {
   const [signUpModalOpen,setSignUpModalOpen] = useState(false);
   const [signInModalOpen,setSignInModalOpen] = useState(false);
+
+  const {user,logout} = useAuth();
 
   const [switchNav, setSwitchNav] = useState(false);
 
@@ -65,12 +68,14 @@ const Navbar = () => {
             <Link to='/' className={styles.navMenuItem}>HOME</Link>
             <Link to='/shop' className={styles.navMenuItem}>SHOP</Link>
             <Link to='/about' className={styles.navMenuItem}>ABOUT</Link>
+            {user.email && <Link to='/profile' className={styles.navMenuItem}>PROFILE</Link>}
             
             {
               switchNav ?
                 <div className={`${styles.buttonContainer} ${switchNav ? styles.buttonContainerNavActive : ''}`}>
-                  <Button onClick={()=> setSignUpModalOpen(true)} className={`button-white-bg btn ${styles.navbarSignUpBtn}`} color="primary">SIGN UP</Button>
-                  <Button className={`button-orange-bg btn ${styles.navbarSignInBtn}`} color="primary">SIGN IN</Button>
+                  {!user.email && <Button onClick={()=> setSignUpModalOpen(true)} className={`button-white-bg btn ${styles.navbarSignUpBtn}`} color="primary">SIGN UP</Button>}
+                  {!user.email && <Button onClick={() => setSignInModalOpen(true)} className={`button-orange-bg btn ${styles.navbarSignInBtn}`} color="primary">SIGN IN</Button>}
+                  {user.email && <Button onClick={() => logout()} className={`button-orange-bg btn ${styles.navbarSignInBtn}`} color="primary">LOG OUT</Button>}
                 </div>
                 :
                 <span></span>
@@ -79,8 +84,9 @@ const Navbar = () => {
         </div>
 
         <div className={styles.buttonContainer}>
-          <Button onClick={()=> setSignUpModalOpen(true)} className={`button-white-bg btn ${styles.navbarSignUpBtn}`} color="primary">SIGN UP</Button>
-          <Button onClick={() => setSignInModalOpen(true)} className={`button-orange-bg btn ${styles.navbarSignInBtn}`} color="primary">SIGN IN</Button>
+                  {!user.email && <Button onClick={()=> setSignUpModalOpen(true)} className={`button-white-bg btn ${styles.navbarSignUpBtn}`} color="primary">SIGN UP</Button>}
+                  {!user.email && <Button onClick={() => setSignInModalOpen(true)} className={`button-orange-bg btn ${styles.navbarSignInBtn}`} color="primary">SIGN IN</Button>}
+                  {user.email && <Button onClick={() => logout()} className={`button-white-bg btn ${styles.navbarSignInBtn}`} color="primary">LOG OUT</Button>}
         </div>
 
       </Toolbar>

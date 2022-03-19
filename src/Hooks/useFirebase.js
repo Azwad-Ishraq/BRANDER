@@ -86,6 +86,20 @@ const useFirebase = () => {
     }
 
 
+    // LOGOUT USER
+    const logout = () => {
+        setloading(true);
+        signOut(auth)
+        .then(()=>{
+
+        })
+        .catch((error)=>{
+            setAuthError(error.message);
+        })
+        .finally(()=> setloading(false));
+    }
+
+
     // GET THE CURRENTLY SIGNED-IN USER
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (user)=>{
@@ -107,7 +121,8 @@ const useFirebase = () => {
         signInWithGoogle,
         registerUser,
         authError,
-        loginUser
+        loginUser,
+        logout
 
 
     }
