@@ -1,0 +1,27 @@
+.img{
+    width: 100%;
+}
+.subHeading{
+    font-weight: 700!important;
+    position: relative;
+    right: 100px;
+    margin-bottom: 20px!important;
+}
+.gridItemTwo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    height: 100%;
+}
+.whiteText{
+    color: white!important;
+}
+@media screen and (max-width:900px) {
+    .subHeading{
+        right: 0px;
+    }
+    .whiteText{
+        color: #2f3640!important;
+    }
+}

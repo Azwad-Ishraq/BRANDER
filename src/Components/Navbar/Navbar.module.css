@@ -1,0 +1,129 @@
+.navbar{
+    box-shadow: none!important;
+    background-color: transparent!important;
+}
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbarSignInBtn{
+    margin-left: 20px!important;
+}
+.title{
+    color: black!important;
+    margin-right: 20px!important;
+    font-weight: 700!important;
+}
+.navMenuContainer{
+    display: flex;
+    align-items: center;
+}
+.appsIcon{
+    font-size: 30px!important;
+    color: black!important;
+}
+.navMenuItems{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+.navMenuItem{
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    margin: 0 20px;
+    font-weight: 500;
+}
+.iconButton{
+    display: none!important;
+    
+}
+
+@media screen and (max-width:1100px) {
+    
+    .navMenuItem{
+        padding: 5px 5px;
+        margin: 0 5px;
+    }
+    .navMenuItems{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:900px){
+    .navMenuItems{
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    align-items: flex-start;
+    box-shadow: 10px 10px 20px #80808029;
+    background-color: white;
+    height: 100vh;
+    justify-content: flex-start;
+    left: -100vw;
+    width: 30%;
+    transition: .5s;
+    padding-left: 30px;
+    padding-top: 20px;
+    
+    }
+    .navMenuItem{
+        padding: 5px 0px;
+        margin: 10px 0px;
+    }
+    .navMenuItemsActive{
+        left: 0px;
+    }
+    .buttonContainer{
+        margin-left: 20px;
+    }
+    .iconButton{
+        display: inline-flex!important;
+    }
+    .navCloseBtnContainer{
+        height: 50px;
+        /* width: 100%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .closeLine{
+        width: 30px;
+        height: 2px;
+        background-color: black;
+        margin: -1px;
+        transition: .5s;
+        
+    }
+    .closeLineOne{
+        transform: rotate(45deg);
+    }
+    .closeLineTwo{
+        transform: rotate(-45deg);
+        
+    }
+    .buttonContainer{
+        display: none;
+    }
+    .toolbar{
+        justify-content: flex-start;
+    }
+    .buttonContainerNavActive{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0!important;
+    }
+    .navbarSignInBtn{
+        margin-left: 0!important;
+        margin-top: 10px!important;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .title{
+        font-size: 20px!important;
+    }
+}

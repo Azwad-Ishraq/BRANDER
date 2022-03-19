@@ -1,0 +1,27 @@
+.heading{
+    text-align: center;
+}
+.subHeading{
+    text-align: center;
+    font-weight: 600!important;
+}
+.gridItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.icon{
+    color: #ffb03a;
+    font-size: 40px!important;
+    margin-bottom: 20px!important;
+}
+.gridItemSubHeading{
+    text-align: center!important;
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}

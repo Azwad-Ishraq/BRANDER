@@ -1,0 +1,30 @@
+.gridItemOne{
+    border-left: 5px solid #ffb03a;
+    padding-left: 20px;
+}
+.subHeading{
+    font-weight:600!important;
+    color: #2f3640;
+}
+.heading{
+    font-weight: 500!important;
+}
+.desc{
+    color: gray;
+}
+.gridItemTwoHeading{
+    color: #2f3640;
+    font-weight: 600!important;
+    text-align: center;
+}
+.gridItemTwoSubHeading{
+    color: #2f3640;
+    text-align: center;
+}
+.gridItemTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

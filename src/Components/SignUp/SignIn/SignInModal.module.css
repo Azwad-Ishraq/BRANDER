@@ -1,0 +1,15 @@
+.container{
+    padding:40px;
+}
+
+.title{
+    text-align: center;
+}
+.textField{
+    width: 100%;
+}
+.googleIcon{
+    font-size:30px!important;
+    margin-left: 10px;
+    cursor: pointer;
+}

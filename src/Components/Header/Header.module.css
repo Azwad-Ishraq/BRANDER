@@ -1,0 +1,88 @@
+.container{
+    margin-bottom: 100px;
+    background-size: cover;
+    
+}
+.headerBody{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   
+}
+.triangleImg{
+    height: 800px;
+    width: 600px;
+    margin-top: 20px;
+}
+.headerTexts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading{
+    width: 70%;
+    margin-bottom: 30px!important;
+
+}
+.subHeading{
+    width: 70%;
+    color: gray;
+    text-transform: uppercase;
+    margin-bottom: 30px!important;
+}
+.orangeHeading{
+    color: #ffb03a;
+}
+.viewMoreBtn{
+    text-decoration: none;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.viewMoreBtn:focus{
+    color: black!important;
+}
+.headerBtns{
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width:1200px) {
+    .heading{
+        font-size: 30px!important;
+    }
+    .subHeading{
+        font-size: 15px!important;
+        text-align: center!important;
+    }
+    .headerBody{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .headerTexts{
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .headerBtns{
+        margin-bottom: 50px;
+    }
+    .heading{
+        text-align: center!important;
+    }
+    .triangleImg{
+        height: 700px;
+        width: auto;
+    }
+
+}
+@media screen and (max-width:700px){
+    .triangleImg{
+        width: 50%;
+        height: auto;
+    }
+    .headerBtns{
+        flex-direction: column;
+    }
+    .viewMoreBtn{
+        margin-top: 20px;
+    }
+}
+

@@ -1,0 +1,31 @@
+
+.imgOne{
+    height: 90%;
+    width: 65%;
+}
+.imgTwo{
+    height: 100%;
+    width: 60%;
+}
+.imgThree{
+    height: 90%;
+    width: 45%;
+}
+.imgFour{
+    height: 90%;
+    width: 60%;
+}
+.imgFive{
+    height: 80%;
+    width: 60%;
+}
+.imgSix{
+    height: 90%;
+    width: 60%;
+}
+.gridItem{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: flex-start!important;
+    padding: 10px!important;
+}

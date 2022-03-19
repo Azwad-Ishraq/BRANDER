@@ -1,0 +1,26 @@
+.container{
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px #80808029;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    justify-items: center;
+}
+.itemTitle{
+    margin-bottom: 20px!important;
+}
+.item{
+    width: 80%;
+}
+@media screen and (max-width:1200px) {
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .item{
+        margin-bottom: 20px;
+    }
+}
